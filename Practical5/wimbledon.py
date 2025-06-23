@@ -13,12 +13,11 @@ def main():
 def get_records(filename):
     """Read and return data rows from file."""
     with open(filename, "r", encoding="utf-8-sig") as in_file:
-        next(in_file)  # Skip header
+        next(in_file)
         return [line.strip().split(",") for line in in_file]
 
 
 def process_data(data):
-    """Return dictionary of champions to wins and set of countries."""
     champion_to_wins = {}
     countries = set()
     for record in data:
