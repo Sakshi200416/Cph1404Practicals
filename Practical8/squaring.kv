@@ -1,0 +1,24 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    TextInput:
+        id: input_number
+        text: '0'
+        multiline: False
+        input_filter: 'float'
+        font_size: 28
+        size_hint_y: 0.4
+
+    Button:
+        text: "Square it!"
+        font_size: 24
+        on_press: app.calculate_square()
+        size_hint_y: 0.3
+
+    Label:
+        id: output_label
+        text: '0.0'
+        font_size: 28
+        size_hint_y: 0.3
